@@ -1,0 +1,149 @@
+body {
+	margin: 0;
+	padding: 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-size: cover;
+    text-align: center;
+}
+
+#pokedex {
+    width: 600px;
+    z-index: -50;
+}
+
+.header {
+    padding: 15px;
+}
+
+.header img {
+    width: 250px;
+}
+
+.program {
+    position: relative;
+    font-family: 'VT323', 'Courier';
+}
+
+.big-screen {
+    background-color: #57ab64;
+    font-color: #000000;
+    position: absolute;
+    top: 132px;
+    left: 394px;
+    width: 190px;
+    height: 125px;
+    z-index: -1;
+}
+
+.big-screen p {
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.medium-screen {
+    position: absolute;
+    right: 386px;
+    z-index: -1;
+}
+
+.medium-screen p {
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
+.top {
+    background-color: #57ab64;
+    top: 142px;
+    width: 200px;
+    height: 70px;
+}
+
+.bottom{
+    background-color: #32a7f0;
+    top: 227px;
+    z-index: 50;
+    width: 192px;
+    height: 60px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.small-screen {
+    background-color: #FFA500;
+    position: absolute;
+    top: 364px;
+    width: 88px;
+    height: 20px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    padding: 5px;
+}
+
+.left {    
+    right: 481px;
+}
+
+.right {
+    right: 375px;
+}
+
+.small-screen a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.type-screen {
+    background-color: #57ab64;
+    position: absolute;
+    top: 357px;
+    left: 410px;
+    width: 100px;
+    z-index: -60;
+    height: 45px;
+    font-size: 21px;
+    line-height: 14px;
+    padding-top: 7px;
+}
+
+#smaller_btn {
+    font-size: 16px !important;
+    width: 60px !important;
+    height: 20px !important;
+    padding: 0px !important;   
+}
+
+.textarea {
+    background-color: white !important;
+    height: 3px !important;
+    font-size: 15px !important;
+    width: 55% !important;
+    margin-right: 2px !important;
+    color: #000000;
+}
+
+#choice button, input {
+    background-color: #055B90;
+    color: #ffffff;
+    border-width: 1px;
+    padding: 9px;
+    font-size: 25px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #000;
+    margin-top: 10px;
+    width: 44%;
+    margin-top: 4px;
+    height: 85%;
+    font-family: 'VT323', 'Courier';
+}
+
+#file_upload {
+    background-color: transparent !important;
+    /* border-radius: 0; */
+    border-width: 0 !important;
+    padding: 0 !important;
+    margin-right: 12px !important;
+}

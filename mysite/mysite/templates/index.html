@@ -1,0 +1,71 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Pokemon</title>
+		<link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
+		<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+		<script>
+			function showURL() {
+				var fill = document.getElementById("choice");
+				fill.innerHTML = "";
+				fill.innerHTML = '<form action="/result/" method="get">'
+				+ '<input class="textarea" type="text" name="url" placeholder="URL">'
+				+ '<input id="smaller_btn" type="submit">'
+				+ '</form><button id="smaller_btn" onclick="showChoices()">Cancel</button>';
+
+			}
+
+			function showFile() {
+				var fill = document.getElementById("choice");
+				fill.innerHTML = "";
+				fill.innerHTML = '<form method="post" action="/result/" enctype="multipart/form-data">'
+				+ '<input id="file_upload" type="file" name="pic" accept="image/*" >'
+				+ '<input id="smaller_btn" type="submit">'
+				+ '</form><button id="smaller_btn" onclick="showChoices()">Cancel</button>';
+			}
+
+			function showChoices() {
+				var fill = document.getElementById("choice");
+				fill.innerHTML = "";
+				fill.innerHTML = '<button onclick="showURL()">URL</button> <button onclick="showFile()">File</button>';
+			} 
+		</script>
+	</head>
+	<body style="background-image: url('{% static "background1.gif" %}')">
+		<audio autoplay loop>
+		  <source src="{% static "PokemonTVThemeSongFull.mp3" %}" type="audio/mpeg">
+		</audio>
+		<div class="content">
+			<div class="header">
+				<img src="{% static "logo-dark-RGB-big.png" %}"/>
+				<img src="{% static "pokedex_logo.png" %}"/>
+			</div>
+			<div class="program">
+				<div class="big-screen">
+					<p>{{ pokemon }}</p>
+					<img src="{{ poke_image }}" />
+				</div>
+				<div class="type-screen">
+					{{ poke_type }}
+				</div>
+				<div class="medium-screen top">
+					<p>{{ height }}</p>
+					<p>{{ description }}</p>
+				</div>
+				<div id="choice" class="medium-screen bottom">
+					<button onclick="showURL()">URL</button>
+					<button onclick="showFile()">File</button>
+				</div>
+				<div class="small-screen left">
+					<a href="http://clarifai.com">Clarifai</a>
+				</div>
+				<div class="small-screen right">
+					<a href="http://github.com/CamiWilliams">GitHub</a>
+				</div>
+
+				<img id="pokedex" src="{% static "pokedex_transparent.png" %}" />
+			</div>
+		</div>
+	</body>
+</html>
